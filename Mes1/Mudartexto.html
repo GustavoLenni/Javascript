@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando DOM</title>
+</head>
+<body>
+    <p id="Paragrafo">Texto Original</p>
+    <button id="botao"></button>
+    <script> document.getElementById("botao").addEventListener("click",function(){//pegando o elemento botao e adicionando o evento de click e função 
+        let paragrafo = document.getElementById("Paragrafo");//variavel pegando o elemento paragrafo 
+        paragrafo.textContent = paragrafo.textContent === "Texto original." ? "Texto alterado!" : "Texto original.";// esse ultima linha é como se fosse um if e else se o paragrafo for igual ao texto original ao clicar ele muda para texto alterado e se for igual ao texto alterado ele muda para texto original 
+
+    });
+    </script>
+</body>
+</html>

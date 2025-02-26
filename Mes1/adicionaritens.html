@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista</title>
+  </head>
+  <body>
+    <h1>Minha lista</h1>
+    <ul id="lista"></ul>
+    <button onclick="adicionaritem()">Adicionar item</button>
+    <script>
+              function adicionaritem(){
+                  let lista = document.getElementById("lista");
+
+                   let novoitem = document.createElement("li");
+                   let apagar = document.createElement("button")
+                   apagar.textContent = "Apagar";
+
+                   novoitem.textContent = prompt("Digite Algo");//entrada do usuario
+
+
+                   apagar.onclick = function(){
+                      novoitem.remove();
+                   }
+                   novoitem.appendChild(apagar);
+                   lista.appendChild(novoitem);
+
+              }
+              //createElement cria o elemento
+              //textcontent mudar texto ou adicionar texto
+              //remove() apagar
+    </script>
+  </body>
+</html>
