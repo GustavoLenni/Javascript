@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let novaDiv; // Declara a variável fora do escopo para manter a referência
+        const removebtn = document.createElement('button');
+        removebtn.textContent = 'Remover/Adicionar Div';  // Texto no botão
+        document.body.appendChild(removebtn);
+
+        // Função para criar e adicionar a div ao DOM
+        function adicionaNovaDiv() {
+            novaDiv = document.createElement('div');
+            novaDiv.textContent = 'Texto';
+            document.body.appendChild(novaDiv);
+        }
+
+        // Chama a função para adicionar a div inicialmente
+        adicionaNovaDiv();
+
+        // Adiciona o evento de clique no botão
+        removebtn.addEventListener('click', function() {
+            if (novaDiv.parentNode) {
+                // Se a novaDiv está no DOM, remove ela
+                novaDiv.remove();
+            } else {
+                // Se a novaDiv não está no DOM, adiciona novamente
+                adicionaNovaDiv();
+            }
+        });
+    </script>
+</body>
+</html>
